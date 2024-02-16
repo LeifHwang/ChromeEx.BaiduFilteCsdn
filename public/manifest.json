@@ -1,19 +1,21 @@
 {
   "manifest_version": 3,
-  "name": "Baidu_filter_csdn",
-  "$schema": "https://json.schemastore.org/chrome-manifest.json",
-  "version": "0.1.0",
-  "description": "My Chrome Extension",
+  "name": "baidu_filter_csdn",
+  "version": "1.0.0",
+  "description": "自动过滤百度查询结果中的[csdn]条目",
   "icons": {
     "16": "icons/icon_16.png",
     "32": "icons/icon_32.png",
     "48": "icons/icon_48.png",
     "128": "icons/icon_128.png"
   },
-  "background": {
-    "service_worker": "background.js"
-  },
-  "chrome_url_overrides": {
-    "newtab": "index.html"
-  }
+  "default_locale": "zh_CN",
+  "permissions": ["storage", "tabs"],
+  "content_scripts": [
+    {
+      "matches": ["https://www.baidu.com/*"],
+      "js": ["contentScript.js"]
+    }
+  ],
+  "options_page": "options.html"
 }
