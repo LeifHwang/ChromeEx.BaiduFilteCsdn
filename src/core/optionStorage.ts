@@ -27,9 +27,9 @@ class OptionStorage {
   async ready() {
     const res = await chrome.storage.local.get(["inputFilter", "autoCplFilter", "urlFilter"]);
 
-    this.inputFilter = res.inputFilter ?? false;
-    this.autoCplFilter = res.autoCplFilter ?? false;
-    this.urlFilter = res.urlFilter ?? false;
+    this.inputFilter = res.inputFilter ?? true;
+    this.autoCplFilter = res.autoCplFilter ?? true;
+    this.urlFilter = res.urlFilter ?? true;
   }
 
   async save(data: { inputFilter: boolean; autoCplFilter: boolean; urlFilter: boolean }) {

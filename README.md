@@ -4,8 +4,9 @@ My Chrome Extension
 
 ## Features
 
-- Feature 1
-- Feature 2
+- 搜索栏输入自动补上[ -csdn]
+- 搜索框提示条目自动补上[ -csdn]
+- 相关搜索链接自动补上[ -csdn]
 
 ## Install
 
