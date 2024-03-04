@@ -10,7 +10,7 @@ My Chrome Extension
 
 ## Install
 
-[**Chrome** extension]()
+[**Edge** extension](https://microsoftedge.microsoft.com/addons/detail/kkofkmgjnlolgljejjdamjdadfgkjjic)
 
 ## Contribution
 
