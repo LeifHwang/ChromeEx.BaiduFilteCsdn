@@ -24,6 +24,13 @@ document.getElementById("su")?.addEventListener(
   },
   false
 );
+// 搜索输入框获取输入焦点时，去掉尾部[ -csdn]，方便重新录入
+document.getElementById("kw")?.addEventListener("focus", (ev) => {
+  const el = ev.target as HTMLInputElement;
+  if (el.value.endsWith(" -csdn")) {
+    el.value = el.value.replace(" -csdn", "");
+  }
+});
 
 // 搜索框提示条目
 const formObs = new MutationObserver((m) => {
