@@ -14,7 +14,13 @@ document.getElementById("su")?.addEventListener(
 
     const inputEl = document.getElementById("kw") as HTMLInputElement;
     if (inputEl) {
-      const newVal = autoPadSuffix(inputEl.value);
+      // 最后一个字符是减号时，加上*，避免后续减号指令失效
+      let text = inputEl.value.trimEnd();
+      if (text.endsWith("-")) {
+        text += "*";
+      }
+
+      const newVal = autoPadSuffix(text);
       if (newVal) {
         inputEl.value = newVal;
 
